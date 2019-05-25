@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://tariq123:tariq123@devconnect-ky6py.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "mysecrettokeDASDASFASFAdasdan@0135891251295480124512",
+  "githubClientId": "b38e4430ba44a21bf849",
+  "githubSecret": "433ab73cd47383a925af558a5783fb15433450e5"
+}
