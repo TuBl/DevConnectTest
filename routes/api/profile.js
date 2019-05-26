@@ -332,9 +332,11 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
 //@desc     Get user repos from github
 //@access   Public
 
-router.get("/github/:username", async (req, res) => {
+// @route    GET api/profile/github/:username
+// @desc     Get user repos from Github
+// @access   Public
+router.get("/github/:username", (req, res) => {
   try {
-    //notice we are using the config package we installed earlier to get clobal config from default.json
     const options = {
       uri: `https://api.github.com/users/${
         req.params.username
@@ -344,13 +346,14 @@ router.get("/github/:username", async (req, res) => {
       method: "GET",
       headers: { "user-agent": "node.js" }
     };
-    //using the request package we installed earlier
+
     request(options, (error, response, body) => {
       if (error) console.error(error);
+
       if (response.statusCode !== 200) {
-        return res.status(404).json({ msg: "Github profile was not found" });
+        return res.status(404).json({ msg: "No Github profile found" });
       }
-      //body is a string with escaped quotes and what not, we wrap it with JSON.parse before sending it
+
       res.json(JSON.parse(body));
     });
   } catch (err) {
