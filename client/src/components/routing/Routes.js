@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
-import Alert from "../layout/Alert";
+import Alert from "../layouts/Alert";
 import Dashboard from "../dashboard/Dashboard";
 import CreateProfile from "../profile-forms/CreateProfile";
 import EditProfile from "../profile-forms/EditProfile";
@@ -12,7 +12,7 @@ import Profiles from "../profiles/Profiles";
 import Profile from "../profile/Profile";
 import Posts from "../posts/Posts";
 import Post from "../post/Post";
-import NotFound from "../layout/NotFound";
+import NotFound from "../layouts/NotFound";
 import PrivateRoute from "../routing/PrivateRoute";
 
 const Routes = () => {
